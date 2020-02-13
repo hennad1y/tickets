@@ -1,12 +1,29 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import "./style.css";
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+import Logo from "./components/logo";
+import FilterLeft from "./components/filter-left";
+import FilterTop from "./components/filter-top";
+import TicketsList from "./components/tickets-list";
+import {TicketsProvider} from "./contexts/ticketsContext";
+
+const App = () => {
+    return (
+        <div className="wrapper">
+            <Logo/>
+            <div className="container">
+                <div className="left">
+                    <FilterLeft/>
+                </div>
+                <div className="right">
+                    <FilterTop/>
+                    <TicketsList/>
+                </div>
+            </div>
+        </div>
+    )
+};
+
+ReactDOM.render(<TicketsProvider><App/></TicketsProvider>, document.getElementById('root'));

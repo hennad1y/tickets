@@ -1,0 +1,198 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans&display=swap";
+
+body {
+    background: #F3F7FA;
+    margin: 0;
+    cursor: url("./images/cursor.svg"), auto;
+    font-family: 'Open Sans', sans-serif;
+    min-height: 100vh;
+}
+
+body * {
+    font-family: 'Open Sans', sans-serif;
+    cursor: url("./images/cursor.svg"), auto;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    margin: 54px auto 44px;
+}
+
+.container {
+    display: flex;
+    margin: 0 103px;
+}
+
+.white-bg-and-shadow {
+    background: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.container > .left {
+    margin-right: 20px;
+}
+
+.filter-left {
+    display: flex;
+    flex-direction: column;
+    width: 232px;
+    padding: 20px;
+}
+
+.filter-left > *:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.filter-left h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #4A4A4A;
+    margin-top: 0;
+}
+
+.filter-left input {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    margin: 0;
+}
+
+.filter-left span {
+    border: 1px solid #9ABBCE;
+    border-radius: 2px;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    margin-right: 15px;
+}
+
+.filter-left label {
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-left input:checked ~ .checkmark {
+    border: 1px solid #2196F3;
+    background: url("./images/shape.svg") no-repeat center;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.filter-top {
+    display: flex;
+    height: 50px;
+    margin-bottom: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.filter-top .tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    background: #FFFFFF;
+    flex-grow: 1;
+}
+
+.filter-top .tab:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.filter-top .tab:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.filter-top .tab.active {
+    background: #2196F3;
+    color: #FFFFFF;
+}
+
+.color-gray {
+    color: #A0B0B9;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.color-dark {
+    color: #4A4A4A;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.ticket-item {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.ticket-item .top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.ticket-item .company-logo {
+    display: flex;
+    width: 110px;
+    height: 36px;
+    align-items: center;
+    background: url("./images/company-logo.svg");
+    margin-right: 30px;
+}
+
+.ticket-item .price {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    color: #2196F3;
+}
+
+.ticket-item .info {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.ticket-item .info:last-child {
+    margin-bottom: 0;
+}
+
+.ticket-item .info > * {
+    flex: 0 0 33%;
+    width: 33%;
+}
